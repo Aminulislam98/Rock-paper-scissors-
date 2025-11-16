@@ -6,34 +6,115 @@
     <title>Rock paper scissors</title>
     <link rel="stylesheet" href="07-rock-paper-scissors.css" />
   </head>
+
   <body>
-    <p class="RPS-title">Rock Paper Scissors</p>
-    <button
-      class="move-button"
-      onclick="
+    <div class="main-container">
+      <div class="RPS-container">
+        <p class="RPS-title">Rock Paper Scissors</p>
+        <div class="score-container">
+          <div class="wins-container">
+            <p class="wins">Wins</p>
+            <p class="js-wins">1</p>
+          </div>
+          <div class="losses-container">
+            <p class="losses">Losses</p>
+            <p class="js-losses">1</p>
+          </div>
+          <div class="ties-container">
+            <p class="ties">Ties</p>
+            <p class="js-ties">1</p>
+          </div>
+        </div>
+        <div class="RPS-button-container">
+          <div class="rock-container">
+            <button
+              class="move-button"
+              onclick="
+              playGame('Rock');
+              "
+            >
+              <img class="icon-move rock-icon" src="rock-emoji.png" alt="" />
+              <p class="rock">Rock</p>
+            </button>
+          </div>
 
-     playGame('Rock');
-        
-    "
-    >
-      <img class="icon-move" src="Rock-emoji.png" alt="" />
-    </button>
+          <div class="paper-container">
+            <button
+              class="move-button"
+              onclick=" 
+            playGame('Paper')
+            "
+            >
+              <img class="icon-move paper-icon" src="paper-emoji.png" alt="" />
+              <p class="paper">Paper</p>
+            </button>
+          </div>
 
-    <button
-      class="move-button"
-      onclick=" 
+          <div class="scissors-container">
+            <button
+              class="move-button"
+              onclick="
+                playGame('Scissors');
+                "
+            >
+              <img
+                class="icon-move scissors-icon"
+                src="scissors-emoji.png"
+                alt=""
+              />
+              <p class="scissors">Scissors</p>
+            </button>
+          </div>
+        </div>
+        <!-- up here div-->
+
+        <p
+          onclick="
+      "
+          class="js-result result"
+        ></p>
+        <p
+          onclick="
+      
+      "
+          class="js-YouPick-ComputerPick pickUp"
+        ></p>
+        <p
+          onclick="
     
-    playGame('Paper')
-    
     "
-    >
-      <img class="icon-move" src="Paper-emoji.png" alt="" />
-    </button>
+          class="computerPickup"
+        ></p>
 
-    <button
-      class="move-button"
-      onclick="
+        <p
+          onclick="
+      
+      "
+          class="js-score score"
+        ></p>
+        <p
+          onclick="
+      
+      "
+          class="js-total-played total-played"
+        ></p>
+        <p class="resetScore"></p>
 
+        <button
+          class="reset-button"
+          onclick="
+        resetScore();
+        updateScoreElement();
+      "
+        >
+          Reset score
+        </button>
+      </div>
+    </div>
+
+    <script src="/07-rock-paper-scissors.js"></script>
+  </body>
+</html>
         playGame('Scissors');
 
     "
