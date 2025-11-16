@@ -1,11 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.score-container {
+  background-color: rgba(182, 182, 182, 0.372);
+  backdrop-filter: blur(50px);
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.352);
+  width: 258px;
+  height: 65px;
+  margin-right: 8px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.js-wins,
+.js-losses,
+.js-ties {
+  font-weight: bold;
+  font-size: 25px;
+}
+.wins-container,
+.losses-container,
+.ties-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wins,
+.losses,
+.ties {
+  font-size: 20px;
+  font-weight: bold;
+}
+.you-picked {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.computer-picked {
+  font-weight: bold;
+  margin-left: 5px;
+}
 body {
-  background: rgb(25, 25, 25);
-  color: white;
   font-family: arial;
 }
 .RPS-title {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 .pickUp {
   display: flex;
@@ -17,20 +63,38 @@ body {
   align-items: center;
   font-size: 20px;
 }
-.icon-move {
+
+.rock {
+  height: 52px;
+}
+.paper {
+  height: 52px;
+}
+.scissors {
+  height: 54px;
+}
+.rock-icon {
+  height: 50px;
+}
+.paper-icon {
+  padding-top: 7px;
+  height: 50px;
+}
+.scissors-icon {
+  padding-top: 7px;
   height: 50px;
 }
 .move-button {
   background-color: transparent;
-  border: 3px solid white;
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
-  margin-right: 10px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
 }
 .result {
   font-weight: bold;
   font-size: 25px;
+  margin-bottom: 5px;
 }
 
 .score {
@@ -43,8 +107,10 @@ body {
   font-size: 20px;
 }
 .reset-button {
+  border-radius: 8px;
+  margin-top: 15px;
   background-color: red;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.849);
   color: white;
   padding: 5px 10px;
   font-size: 15px;
@@ -52,33 +118,61 @@ body {
   display: block;
   margin-bottom: 5px;
 }
+/* this code for new RPS */
 
-.set-goal,
-.js-name {
-  border: 1px solid white;
-  color: rgb(0, 0, 0);
-  padding: 5px 10px;
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.main-container {
+  background-image: url(https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg);
+  background-size: cover;
+  background-position: top;
+
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.set-goal:focus {
+.RPS-container {
+  padding: 10px 0px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 3px solid rgba(255, 255, 255, 0.352);
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.set-search {
-  background-color: white;
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  padding: 5px 10px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 10px;
-  display: block;
-  margin-bottom: 5px;
+.RPS-button-container {
+  display: flex;
 }
-.person-name {
-  color: #22c55e;
+.rock-container,
+.paper-container,
+.scissors-container {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.352);
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
 }
-.is-named {
-  border: 2px solid red;
+@media (max-width: 586px) {
+  .RPS-container {
+    width: 375px;
+  }
+  .pickUp {
+    font-size: 16px;
+  }
+  .reset-button {
+    padding: 8px 13px;
+    font-size: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.352);
+  }
+  .result {
+    margin-bottom: 5px;
+  }
 }
