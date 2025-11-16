@@ -1,0 +1,84 @@
+body {
+  background: rgb(25, 25, 25);
+  color: white;
+  font-family: arial;
+}
+.RPS-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.pickUp {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.computerPickup {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.icon-move {
+  height: 50px;
+}
+.move-button {
+  background-color: transparent;
+  border: 3px solid white;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  margin-right: 10px;
+}
+.result {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.score {
+  font-size: 20px;
+}
+.total-played {
+  font-size: 20px;
+}
+.resetScore {
+  font-size: 20px;
+}
+.reset-button {
+  background-color: red;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.set-goal,
+.js-name {
+  border: 1px solid white;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.set-goal:focus {
+}
+.set-search {
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+.person-name {
+  color: #22c55e;
+}
+.is-named {
+  border: 2px solid red;
+}

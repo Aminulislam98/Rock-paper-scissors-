@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="07-rock-paper-scissors.css" />
+  </head>
+  <body>
+    <p class="RPS-title">Rock Paper Scissors</p>
+    <button
+      class="move-button"
+      onclick="
+
+     playGame('Rock');
+        
+    "
+    >
+      <img class="icon-move" src="rock-emoji.png" alt="" />
+    </button>
+
+    <button
+      class="move-button"
+      onclick=" 
+    
+    playGame('Paper')
+    
+    "
+    >
+      <img class="icon-move" src="paper-emoji.png" alt="" />
+    </button>
+
+    <button
+      class="move-button"
+      onclick="
+
+        playGame('Scissors');
+
+    "
+    >
+      <img class="icon-move" src="scissors-emoji.png" alt="" />
+    </button>
+    <p
+      onclick="
+    "
+      class="js-result result"
+    ></p>
+    <p
+      onclick="
+    
+    "
+      class="js-YouPick pickUp"
+    ></p>
+    <p
+      onclick="
+  
+  "
+      class="js-ComputerPick computerPickup"
+    ></p>
+
+    <p
+      onclick="
+    
+    "
+      class="js-score score"
+    ></p>
+    <p
+      onclick="
+    
+    "
+      class="js-total-played total-played"
+    ></p>
+    <p class="resetScore"></p>
+
+    <button
+      class="reset-button"
+      onclick="
+      resetScore();
+      updateScoreElement();
+    "
+    >
+      Reset score
+    </button>
+    <input class="js-set-goal set-goal" type="text" placeholder="Play Limit" />
+    <button
+      onclick="
+    setGoal();
+    
+    "
+      class="set-search js-confirm-button"
+    >
+      Confirm
+    </button>
+    <input class="js-name" type="text" placeholder="Set Your Name" />
+    <button
+      onclick="
+    setName()
+    "
+      class="set-search js-name-confirm-button"
+    >
+      Confirm Your Name
+    </button>
+    <p class="js-remaining"></p>
+    <p class="js-person-name person-name"></p>
+
+    <script src="/07-rock-paper-scissors.js"></script>
+  </body>
+</html>
